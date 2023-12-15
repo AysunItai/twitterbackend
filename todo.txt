@@ -1,0 +1,32 @@
+git init
+git add .
+git commit -m "init project and setup the crud endpoints"
+after installation of prisma we have to initialize its schema
+npx prisma init --datasource-provider sqlite
+after schema prisma creations we define 
+by model correspending table 
+vs code prisma extension
+after finish with database schemas next step is data migration
+npx prisma migrate dev --name "init"
+that migration commands is a list of sql 
+commends ;
+take the database from previous state to a new state
+for example you changed something in the database so 
+you create a new migration
+
+how to visualise database?
+npx prisma studio
+
+querying our database:
+
+next step is we need to install prisma client
+npm install @prisma/client
+start implementing prisma client in user routes
+const prisma = new PrismaClient();
+now through this prisma we are able to interact with
+our database
+list users
+
+
+1.11
+https://www.youtube.com/watch?v=mABcyifdsww&t=3399s
